@@ -1,6 +1,6 @@
 {
-  "showmeurnick.midnightconfig.title": "ShowYourself",
-  "showmeurnick.midnightconfig.maxDistance": "Max Distance: ",
-  "showmeurnick.midnightconfig.minDistance": "Min Distance: ",
-  "showmeurnick.midnightconfig.format": "Nickname display format: "
+  "showyourself.midnightconfig.title": "ShowYourself",
+  "showyourself.midnightconfig.maxDistance": "Max Distance: ",
+  "showyourself.midnightconfig.minDistance": "Min Distance: ",
+  "showyourself.midnightconfig.format": "Nickname display format: "
 }
