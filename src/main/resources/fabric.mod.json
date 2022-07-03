@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "showmeurnick",
+  "version": "${version}",
+  "name": "ShowYourself",
+  "description": "See hidden nicknames by clicking the use button.",
+  "authors": [
+    "Feytox",
+    "DearFox"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/showmeurnick/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "name.uwu.feytox.showmeurnick.client.ShowMeUrNickClient"
+    ],
+    "main": [
+      "name.uwu.feytox.showmeurnick.ShowMeUrNick"
+    ]
+  },
+  "mixins": [
+    "showmeurnick.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "1.18.2"
+  }
+}
