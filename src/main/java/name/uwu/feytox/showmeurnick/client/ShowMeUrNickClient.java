@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 public class ShowMeUrNickClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        ShowMeUrNickConfig.init("showmeurnick", ShowMeUrNickConfig.class);
+        ShowMeUrNickConfig.init("showyourself", ShowMeUrNickConfig.class);
     }
 
     public static void showNick() {

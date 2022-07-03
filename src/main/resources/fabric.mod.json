@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "showmeurnick",
+  "id": "showyourself",
   "version": "${version}",
   "name": "ShowYourself",
   "description": "See players' hidden nicknames.",
