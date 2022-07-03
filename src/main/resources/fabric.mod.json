@@ -4,12 +4,15 @@
   "version": "${version}",
   "name": "ShowYourself",
   "description": "See players' hidden nicknames.",
-  "homepage": "https://modrinth.com/mod/show-yourself",
   "authors": [
     "Feytox",
     "DearFox"
   ],
-  "contact": {},
+  "contact": {
+    "homepage": "https://modrinth.com/mod/show-yourself",
+    "sources": "https://github.com/feytox/ShowYourself",
+    "issues": "https://github.com/feytox/ShowYourself/issues"
+  },
   "license": "MIT",
   "icon": "assets/showmeurnick/icon.png",
   "environment": "client",
