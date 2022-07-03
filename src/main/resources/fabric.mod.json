@@ -3,9 +3,10 @@
   "id": "showmeurnick",
   "version": "${version}",
   "name": "ShowYourself",
-  "description": "See hidden nicknames by clicking the use button.",
+  "description": "See players' hidden nicknames.",
   "authors": [
-    "Feytox"
+    "Feytox",
+    "DearFox"
   ],
   "contact": {},
   "license": "MIT",
