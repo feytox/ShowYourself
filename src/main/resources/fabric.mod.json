@@ -4,6 +4,7 @@
   "version": "${version}",
   "name": "ShowYourself",
   "description": "See players' hidden nicknames.",
+  "homepage": "https://modrinth.com/mod/show-yourself",
   "authors": [
     "Feytox",
     "DearFox"
