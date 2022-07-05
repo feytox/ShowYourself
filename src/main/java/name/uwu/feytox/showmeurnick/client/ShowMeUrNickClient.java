@@ -3,6 +3,7 @@ package name.uwu.feytox.showmeurnick.client;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -19,9 +20,17 @@ import javax.annotation.Nullable;
 
 @Environment(EnvType.CLIENT)
 public class ShowMeUrNickClient implements ClientModInitializer {
+    public static int ticksAfterCheck = 200;
+
     @Override
     public void onInitializeClient() {
         ShowMeUrNickConfig.init("showyourself", ShowMeUrNickConfig.class);
+
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (ticksAfterCheck < 200) {
+                ticksAfterCheck += 1;
+            }
+        });
     }
 
     public static void showNick() {
@@ -32,7 +41,10 @@ public class ShowMeUrNickClient implements ClientModInitializer {
                 targetedEntity = client.targetedEntity;
             }
             if (targetedEntity instanceof PlayerEntity && client.player.distanceTo(targetedEntity) <= ShowMeUrNickConfig.maxDistance
-                    && client.player.distanceTo(targetedEntity) >= ShowMeUrNickConfig.minDistance) {
+                    && client.player.distanceTo(targetedEntity) >= ShowMeUrNickConfig.minDistance
+                    && client.player.distanceTo(targetedEntity) <= 64
+                    && ticksAfterCheck >= (int) ((client.player.distanceTo(targetedEntity) / 64) * 200)) {
+                ticksAfterCheck = 0;
                 client.player.sendMessage(new LiteralText(ShowMeUrNickConfig.format.replace("$NICK$",
                         targetedEntity.getName().getString()).replace("&", "§")), true);
             }
