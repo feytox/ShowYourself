@@ -10,7 +10,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.decoration.ItemFrameEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileUtil;
-import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Box;
@@ -45,7 +45,7 @@ public class ShowMeUrNickClient implements ClientModInitializer {
                     && client.player.distanceTo(targetedEntity) <= 64
                     && ticksAfterCheck >= (int) ((client.player.distanceTo(targetedEntity) / 64) * 200)) {
                 ticksAfterCheck = 0;
-                client.player.sendMessage(new LiteralText(ShowMeUrNickConfig.format.replace("$NICK$",
+                client.player.sendMessage(Text.literal(ShowMeUrNickConfig.format.replace("$NICK$",
                         targetedEntity.getName().getString()).replace("&", "§")), true);
             }
         }
@@ -75,7 +75,7 @@ public class ShowMeUrNickClient implements ClientModInitializer {
                 Vec3d vec3d3 = vec3d.add(vec3d2.x * d, vec3d2.y * d, vec3d2.z * d);
                 Box box = entity.getBoundingBox().stretch(vec3d2.multiply(d)).expand(1.0, 1.0, 1.0);
                 EntityHitResult entityHitResult = ProjectileUtil.raycast(entity, vec3d, vec3d3, box, (entityx) ->
-                        !entityx.isSpectator() && entityx.collides(), e);
+                        !entityx.isSpectator() && entityx.canHit(), e);
                 if (entityHitResult != null) {
                     Entity entity2 = entityHitResult.getEntity();
                     Vec3d vec3d4 = entityHitResult.getPos();
