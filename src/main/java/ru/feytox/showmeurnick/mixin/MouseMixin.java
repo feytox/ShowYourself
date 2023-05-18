@@ -1,6 +1,6 @@
-package name.uwu.feytox.showmeurnick.mixin;
+package ru.feytox.showmeurnick.mixin;
 
-import name.uwu.feytox.showmeurnick.client.ShowMeUrNickClient;
+import ru.feytox.showmeurnick.client.ShowMeUrNickClient;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.Mouse;
 import org.spongepowered.asm.mixin.Mixin;

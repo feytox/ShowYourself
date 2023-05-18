@@ -1,4 +1,4 @@
-package name.uwu.feytox.showmeurnick.client;
+package ru.feytox.showmeurnick.client;
 
 import eu.midnightdust.lib.config.MidnightConfig;
 

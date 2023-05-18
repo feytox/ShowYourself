@@ -1,4 +1,4 @@
-package name.uwu.feytox.showmeurnick;
+package ru.feytox.showmeurnick;
 
 import net.fabricmc.api.ModInitializer;
 

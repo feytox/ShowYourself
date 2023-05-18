@@ -1,4 +1,4 @@
-package name.uwu.feytox.showmeurnick.client;
+package ru.feytox.showmeurnick.client;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;

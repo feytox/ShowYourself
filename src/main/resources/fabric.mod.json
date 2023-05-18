@@ -18,10 +18,10 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "name.uwu.feytox.showmeurnick.client.ShowMeUrNickClient"
+      "ru.feytox.showmeurnick.client.ShowMeUrNickClient"
     ],
     "main": [
-      "name.uwu.feytox.showmeurnick.ShowMeUrNick"
+      "ru.feytox.showmeurnick.ShowMeUrNick"
     ]
   },
   "mixins": [
@@ -29,6 +29,6 @@
   ],
   "depends": {
     "fabric": "*",
-    "minecraft": "1.19.x"
+    "minecraft": "1.19.4"
   }
 }
