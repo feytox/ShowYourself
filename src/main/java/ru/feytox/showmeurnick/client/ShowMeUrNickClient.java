@@ -24,8 +24,6 @@ public class ShowMeUrNickClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        ShowMeUrNickConfig.init("showyourself", ShowMeUrNickConfig.class);
-
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (ticksAfterCheck < 200) {
                 ticksAfterCheck += 1;
