@@ -15,6 +15,7 @@ import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.profiler.Profilers;
 import org.jetbrains.annotations.Nullable;
 
 @Environment(EnvType.CLIENT)
@@ -57,7 +58,7 @@ public class ShowMeUrNickClient implements ClientModInitializer {
         Entity entity = client.getCameraEntity();
         if (entity != null) {
             if (client.world != null) {
-                client.getProfiler().push("pick");
+                Profilers.get().push("pick");
                 double d = ShowMeUrNickConfig.maxDistance;
                 HitResult crosshairTarget = entity.raycast(d, tickDelta, false);
                 Vec3d vec3d = entity.getCameraPosVec(tickDelta);
